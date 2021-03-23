@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+}
+
+.A {
+    width: 100%;
+    height: 250px;
+    background: #6b6b6b;
+}
+
+.B {
+    width: 1152px;
+    height: 248px;
+    background: #deffd9;
+}
+
+.CDE {
+    width: 1158px;
+    height: 250px;
+    flex-direction: row;
+}
+
+.box {
+    width: 390px;
+    height: 255px;
+    background: #f1f1f1;
+}
+
+.BCDE {
+    flex-flow: column wrap;
+}
+
+.F {
+    width: 380px;
+    height: 510px;
+    background: #e4eaff;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.border {
+    border: 3px solid black;
+}
+
+.box-sizing {
+    box-sizing: border-box;
+}

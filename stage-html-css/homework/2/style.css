@@ -1,0 +1,26 @@
+.header {
+    background: #deffd9;
+}
+h1{
+    text-align: center;
+}
+.content {
+    border: 10px solid black;
+    border-radius: 10px;
+    background: #daffe5;
+    text-shadow: 2px 2px white;
+}
+
+img{
+    width: 300px;
+    height: 400px;
+}
+
+h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+ul {
+    list-style-type: square;
+}
