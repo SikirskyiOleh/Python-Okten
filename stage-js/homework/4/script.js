@@ -1,19 +1,19 @@
 // -1) створити функцію яка приймає масив та виводить його
 
-function arrOut() {
-    for (const argument of arguments) {
-        console.log(argument)
+function arrOut(arr) {
+    for (const arr1 of arr) {
+        console.log(arr1)
     }
 }
 
-//arr();
+//arrOut([23, 11, 4]);
 //_____________________________________________________
 
 // -2) створити функцію яка заповнює масив рандомними числами та виводить його. Для виведення використати попередню функцію.
 
 function f(min, max) {
     for (let i = 0; i < 15; i++) {
-        arrOut(Math.random() * (max - min) + min);
+        arrOut([Math.random() * (max - min) + min]);
     }
 }
 
@@ -25,15 +25,15 @@ function f(min, max) {
 function min(one, two, three) {
 
     if (one < two && one < three) {
-        arrOut(one);
+        arrOut([one]);
     } else if (two < one && two < three) {
-        arrOut(two);
+        arrOut([two]);
     } else {
-        arrOut(three);
+        arrOut([three]);
     }
 }
 
-//min(10, 12, 100);
+// min(10, 12, 100);
 //____________________________________________________________________
 
 // -4)  створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
@@ -45,7 +45,7 @@ function max(one, two, three) {
             max = arguments[i];
         }
     }
-    return arrOut(max);
+    return arrOut([max]);
 }
 
 //max(121, 1022, 11111);
@@ -60,7 +60,7 @@ function maxArr(arr) {
             max = arr[i];
         }
     }
-    return arrOut(max);
+    return arrOut([max]);
 }
 
 //maxArr([13, 11, 100]);
@@ -75,7 +75,7 @@ function minArr(arr) {
             min = arr[i];
         }
     }
-    return arrOut(min);
+    return arrOut([min]);
 }
 
 // minArr([122, 12, 99]);
@@ -89,7 +89,7 @@ function func(arr) {
         sum += arr[i];
     }
 
-    arrOut(sum);
+    arrOut([sum]);
 }
 
 //func([10, 3, 2, 5, 333]);
@@ -104,7 +104,7 @@ function funcS(arr) {
         sum += arr[i];
     }
 
-    arrOut(sum / s);
+    arrOut([sum / s]);
 }
 
 //funcS([10, 3, 2, 5, 1]);
@@ -118,7 +118,7 @@ function keys(arr) {
     for (let i = 0; i < arr.length; i++) {
         k = Object.keys(arr[i]);
     }
-    arrOut(k)
+    arrOut([k])
 }
 
 //keys([{name: 'Oleh', age: 22}]);
@@ -132,7 +132,7 @@ function val(arr) {
     for (let i = 0; i < arr.length; i++) {
         k = Object.values(arr[i]);
     }
-    arrOut(k)
+    arrOut([k])
 }
 
 //val([{name: 'Oleh', age: 22}]);
@@ -155,7 +155,7 @@ function arrSum(arr1, arr2) {
         sum[i] = arr1[i] + arr2[i];
     }
 
-    arrOut(sum);
+    arrOut([sum]);
 }
 
 //arrSum([10, 5, 1, 2], [10, 10, 9, 2]);
