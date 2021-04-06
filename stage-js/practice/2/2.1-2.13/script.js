@@ -14,9 +14,9 @@ for (let i = 0; i < numbers.length; i++) {
 let ar = [1, 2, 3];
 
 for (let i = 0; i < ar.length; i++) {
-    if (ar[i] == 1) {
+    if (ar[i] === 1) {
         ar[i] = 3;
-    } else if (ar[i] == 3) {
+    } else if (ar[i] === 3) {
         ar[i] = 1;
     }
 }
@@ -113,29 +113,10 @@ let mn = [1, 2, 3, 4, 5];
 let acb = ['a', 'b', 'c', 'e'];
 let o = [];
 
-for (let i = 0; i < 1; i++) {
-    o.unshift(mn.shift());
-}
-
-for (let i = 0; i < acb.length - 2; i++) {
-    o.push(acb[i]);
-}
-
-for (let i = 0; i < mn.length - 1; i++) {
-    o.push(mn[i]);
-}
-
-for (let i = 2; i < acb.length - 1; i++) {
-    o.push(acb[i]);
-}
-
-for (let i = 3; i < mn.length; i++) {
-    o.push(mn[i]);
-}
-
-for (let i = 3; i < acb.length; i++) {
-    o.push(acb[i]);
-}
+mn.splice(1, 0,'a', 'b');
+mn.splice(6, 0, 'c');
+mn.splice(8, 0, 'e');
+console.log(mn);
 
 //console.log(o);
 //_______________________________________________________________________
@@ -145,7 +126,7 @@ for (let i = 3; i < acb.length; i++) {
 let q = [12, 3, 5, 1, 44, 8, 99, 2, 10, 30];
 
 for (let i = 0; i < q.length; i++) {
-    if (q[i] % 2 == 0) {
+    if (q[i] % 2 === 0) {
         //console.log(q[i]);
     }
 }
