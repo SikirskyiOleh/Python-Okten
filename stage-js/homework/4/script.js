@@ -1,6 +1,6 @@
 // -1) створити функцію яка приймає масив та виводить його
 
-function arrOut(arr) {
+function arrOut([arr]) {
     for (const arr1 of arr) {
         console.log([arr1])
     }
@@ -53,7 +53,7 @@ function max(one, two, three) {
 
 // -5) створити функцію яка повертає найбільше число з масиву
 
-function maxArr(arr) {
+function maxArr([arr]) {
     let max = arr[0];
     for (let i = 1; i < arr.length; i++) {
         if (arr[i] > max) {
@@ -68,7 +68,7 @@ function maxArr(arr) {
 
 // -6) створити функцію яка повертає найменьше число з масиву
 
-function minArr(arr) {
+function minArr([arr]) {
     let min = arr[0];
     for (let i = 1; i < arr.length; i++) {
         if (arr[i] < min) {
@@ -83,7 +83,7 @@ function minArr(arr) {
 
 // -7) створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його.
 
-function func(arr) {
+function func([arr]) {
     let sum = arr[0];
     for (let i = 1; i < arr.length; i++) {
         sum += arr[i];
@@ -97,7 +97,7 @@ function func(arr) {
 
 // -8) створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
 
-function funcS(arr) {
+function funcS([arr]) {
     let sum = arr[0];
     let s = arr.length;
     for (let i = 1; i < arr.length; i++) {
@@ -112,7 +112,7 @@ function funcS(arr) {
 
 // -9) Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 
-function keys(arr) {
+function keys([arr]) {
     let k = [];
 
     for (let i = 0; i < arr.length; i++) {
@@ -126,7 +126,7 @@ function keys(arr) {
 
 // -10) Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 
-function val(arr) {
+function val([arr]) {
     let k = [];
 
     for (let i = 0; i < arr.length; i++) {
