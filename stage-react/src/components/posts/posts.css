@@ -1,0 +1,15 @@
+.wrap {
+    display: flex;
+}
+
+.posts-box {
+    width: 50%;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.single-post-box {
+    width: fit-content;
+    border: 1px solid cornflowerblue;
+    padding: 10px;
+}
