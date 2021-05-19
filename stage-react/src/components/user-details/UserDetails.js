@@ -14,7 +14,7 @@ export default function UserDetails(props) {
             .then(value => {
                 setUser({...value});
             });
-    }, [user]);
+    }, [id]);
 
     return (
         <div>

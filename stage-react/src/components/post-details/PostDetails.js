@@ -10,7 +10,7 @@ export default function PostDetails(props) {
         fetch('https://jsonplaceholder.typicode.com/posts/' + id)
             .then(value => value.json())
             .then(value => setPost({...value}));
-    }, [post]);
+    }, [id]);
 
     return (
         <div>
