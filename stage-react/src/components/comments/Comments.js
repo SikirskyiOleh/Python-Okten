@@ -5,7 +5,7 @@ import CommentDetails from "../comment-details/CommentDetails";
 
 export default function Comments(props) {
 
-    let {math: {url}} = props;
+    let {match: {url}} = props;
 
     let [comments, setComments] = useState([]);
 

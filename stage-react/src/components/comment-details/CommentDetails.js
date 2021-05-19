@@ -10,7 +10,7 @@ export default function CommentDetails(props) {
         fetch('https://jsonplaceholder.typicode.com/comments/' + id)
             .then(value => value.json())
             .then(value => setComment(value));
-    }, [comment]);
+    }, [id]);
 
     return (
         <div>
