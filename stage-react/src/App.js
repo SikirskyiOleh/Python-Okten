@@ -1,51 +1,59 @@
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
-import Users from './components/users/Users'
-import Home from "./components/home/Home";
-import Posts from "./components/posts/Posts";
-import Comments from "./components/comments/Comments";
+import {useDispatch, useSelector} from "react-redux";
+import React, {useState} from "react";
+import "./index"
 
-function App() {
+const Counter = () => {
+
+    const counter = useSelector(({counter}) => counter);
+
     return (
-        <Router>
-            <div>
-                <Link to={'/'}>home</Link>
-                <br/>
-                <Link to={'/users'}>users </Link>
-                <br/>
-                <Link to={'/posts'}>posts</Link>
-                <br/>
-                <Link to={'/comments'}>comments</Link>
-                <br/>
-                <hr/>
+        <>
+            <h1>counter: {counter}</h1>
+        </>
+    )
+}
 
-                <Switch>
 
-                    <Route exact path={'/'}>
-                        <Home/>
-                    </Route>
+export default function App() {
 
-                    <Route path={'/users'} component={Users}/>
-                    {/*add exact up
-                    <Route path={'/users/:id'} component={UserDetails}/>*/
-                    }
+    const dispatch = useDispatch();
+    const [isOn, setIsOn] = useState(true);
+    const [value, setValue] = useState(0);
 
-                    <Route path={'/posts'} component={Posts}/>
 
-                    {/*<Route path={'/posts'}*/}
-                    {/*       render={() => (<Posts/>)}/>*/}
+    return (
+        <div>
+            {isOn && <Counter/>}
 
-                    <Route path={'/comments'} component={Comments}/>
-                    <hr/>
-                </Switch>
+            <button onClick={() => {
+                setIsOn(prev => !prev)
+            }}>toggle
+            </button>
 
-            </div>
-        </Router>
+            <button onClick={() => {
+                dispatch({type: "INC"})
+            }}>inc
+            </button>
+
+            <button onClick={() => {
+                dispatch({type: "DEC"})
+            }}>dec
+            </button>
+
+            <button onClick={() => {
+                dispatch({type: "RESET"})
+            }}>reset
+            </button>
+
+            <input type={"number"} value={value} onChange={({target: {value}}) => {
+                setValue(value);
+            }}/>
+
+            <button onClick={() => {
+                dispatch({type: "INC_CUSTOM", payload: Number(value)})
+            }}>inc custom
+            </button>
+
+        </div>
     );
 };
-
-export default App;
