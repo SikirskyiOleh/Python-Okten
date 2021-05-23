@@ -1,13 +1,5 @@
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
-import Users from './components/users/Users'
-import Home from "./components/home/Home";
-import Posts from "./components/posts/Posts";
-import Comments from "./components/comments/Comments";
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
+import Counter from "./components/counter/Counter";
 
 function App() {
     return (
@@ -15,32 +7,11 @@ function App() {
             <div>
                 <Link to={'/'}>home</Link>
                 <br/>
-                <Link to={'/users'}>users </Link>
-                <br/>
-                <Link to={'/posts'}>posts</Link>
-                <br/>
-                <Link to={'/comments'}>comments</Link>
-                <br/>
-                <hr/>
+                <Link to={'/counter'}>Counter</Link>
+
 
                 <Switch>
-
-                    <Route exact path={'/'}>
-                        <Home/>
-                    </Route>
-
-                    <Route path={'/users'} component={Users}/>
-                    {/*add exact up
-                    <Route path={'/users/:id'} component={UserDetails}/>*/
-                    }
-
-                    <Route path={'/posts'} component={Posts}/>
-
-                    {/*<Route path={'/posts'}*/}
-                    {/*       render={() => (<Posts/>)}/>*/}
-
-                    <Route path={'/comments'} component={Comments}/>
-                    <hr/>
+                    <Route path={'/counter'} component={Counter}/>
                 </Switch>
 
             </div>
