@@ -1,9 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
-import React, {useState} from "react";
-import "./index"
+import {useState} from "react";
 
 const Counter = () => {
-
     const counter = useSelector(({counter}) => counter);
 
     return (
@@ -13,22 +11,16 @@ const Counter = () => {
     )
 }
 
-
 export default function App() {
 
     const dispatch = useDispatch();
-    const [isOn, setIsOn] = useState(true);
+
     const [value, setValue] = useState(0);
 
 
     return (
         <div>
-            {isOn && <Counter/>}
-
-            <button onClick={() => {
-                setIsOn(prev => !prev)
-            }}>toggle
-            </button>
+            <Counter/>
 
             <button onClick={() => {
                 dispatch({type: "INC"})
@@ -56,4 +48,4 @@ export default function App() {
 
         </div>
     );
-};
+}
