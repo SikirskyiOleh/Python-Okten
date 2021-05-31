@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90ebebb3-aed0-4e15-a5fb-2eea29b4d016" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ts/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ts/app.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ts/models/deputy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ts/models/genders.enum.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ts/models/parliament.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ts/models/party.ts" afterDir="false" />
-    </list>
+    <list default="true" id="90ebebb3-aed0-4e15-a5fb-2eea29b4d016" name="Default Changelist" comment="modify TypeScript_Practice" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,6 +82,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
