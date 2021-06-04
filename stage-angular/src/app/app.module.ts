@@ -1,12 +1,13 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { UsersComponent } from './users/users.component';
+import {AppComponent} from './app.component';
+import {UsersComponent} from './users/users.component';
 import {HttpClientModule} from "@angular/common/http";
-import { UserComponent } from './user/user.component';
-import { PostsComponent } from './posts/posts.component';
-import { PostComponent } from './post/post.component';
+import {UserComponent} from './user/user.component';
+import {PostsComponent} from './posts/posts.component';
+import {PostComponent} from './post/post.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -18,9 +19,13 @@ import { PostComponent } from './post/post.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path: 'users', }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
