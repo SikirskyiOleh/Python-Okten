@@ -1,16 +1,38 @@
-# This is a sample Python script.
+"""
+1)Дано лист:
+  list = [22, 3,5,2,8,2,-23, 8,23,5]
+  - найти min число в листе
+  - удалить все одинаковые значения
+  - заменить каждое четвертое значение на "Х"
+  """
+# -
+li = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
+li.sort()
+print(li[0])
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# -
+res = []
+for i in li:
+    if i not in res:
+        res.append(i)
 
+print(res)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# -
+print(li[::4])
+print(li)
 
+"""
+2)вывести на экран пустой квадрат из "*" сторона которого указана в переменой
+"""
+side = 5
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+for i in range(side):
+    for j in range(side):
+        print('*' if i in [0, side - 1] or j in [0, side - 1] else ' ', end='')
+    print()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+"""
+вывести табличку умножения с помощью цикла while
+"""
+
