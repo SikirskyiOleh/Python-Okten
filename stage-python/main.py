@@ -13,3 +13,48 @@
 # '5' -> 1
 # '4' -> 2
 
+st = 'as 23 fdfdg544'
+li = ''
+
+for i in st:
+    if i:
+        li += i
+
+for ch in li:
+    print(ch + '-> ' + str(li.count(ch)))
+
+# 1)  есть лист:
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+# создать новый лист и записать в него 'GT' если элемент в numbers больше 4 и 'LT' если элемент меньше или равен 4
+# пример:
+# ['LT', 'LT', 'LT', 'LT', 'GT', 'GT', 'GT', 'GT']
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+li = []
+
+for i in numbers:
+    if i > 4:
+        li.append('GT')
+    else:
+        li.append('LT')
+
+print(li)
+
+# 2) есть два листа:
+# list1 = [1, 2, 3, 4, 5]
+# list2 = [-1, 7, 10, -5, -2]
+# записать в лист тюплы (x,y) если x+y == 0
+# пример:
+# [(1, -1), (2, -2), (5, -5)]
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [-1, 7, 10, -5, -2]
+
+li = []
+
+for i in list2:
+    for j in list1:
+        if i + j == 0:
+            li.append((i, j))
+
+print(li)
