@@ -1,16 +1,36 @@
-# This is a sample Python script.
+# Создать класс Rectangle:
+# -конструктор принимает две стороны x,y
+# -описать арифметические методы:
+#   + сума площадей двух экземпляров класса
+#   - разница площадей
+#   == или площади равны
+#   != не равны
+#   >, < меньше или больше
+#   при вызове метода len() подсчитывать сумму сторон
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+class Rectangle:
 
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    def __add__(self, other):
+        return (self.x * self.y) + (other.x * other.y)
 
+    def __sub__(self, other):
+        return (self.x * self.y) - (other.x * other.y)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    def __eq__(self, other):
+        return (self.x * self.y) == (other.x * other.y)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    def __ne__(self, other):
+        return (self.x * self.y) != (other.x * other.y)
+
+    def __gt__(self, other):
+        return (self.x * self.y) > (other.x * other.y)
+
+    def __lt__(self, other):
+        return (self.x * self.y) < (other.x * other.y)
+
+    def __len__(self):
+        return self.x + self.y
