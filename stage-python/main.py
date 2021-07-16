@@ -1,16 +1,31 @@
-# This is a sample Python script.
+# 1)
+# создать два класса Prince и Cinderella:
+# у золушки должно быть имя возраст и размер ноги
+# у принца имя, возраст и размер найденой туфельки, так же должен быть метод который принимает лист золушек и ищет ту самую
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+class Cinderella:
+    name = ''
+    age = 0
+    footSize = 0
+
+    def __init__(self, name, age, footSize):
+        self.name = name
+        self.age = age
+        self.footSize = footSize
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class Prince:
+    name = ''
+    age = 0
+    sizeShoe
+
+    def __init__(self, name, age, sizeShoe):
+        self.name = name
+        self.age = age
+        self.sizeShoe = sizeShoe
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+
+
