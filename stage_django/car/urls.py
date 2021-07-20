@@ -4,5 +4,5 @@ from .views import home, add
 
 urlpatterns = [
     path('', home),
-    path('/create/<int:year>/<str:model>/', add)
+    path('/calc/<int:first>/<str:value>/<int:second>', add)
 ]
