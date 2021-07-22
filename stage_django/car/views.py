@@ -1,4 +1,7 @@
+from django.shortcuts import get_object_or_404
+from rest_framework import status
 from rest_framework.response import Response
+from rest_framework.status import HTTP_200_OK, HTTP_204_NO_CONTENT
 from rest_framework.views import APIView
 from .models import CarModel
 from .serializer import CarSerializer
@@ -32,6 +35,8 @@ from .serializer import CarSerializer
 class CarCreateListView(APIView):
     def get(self, *args, **kwargs):
         qs = CarModel.objects.all()
+        # qs = qs.filter(brand__iexact='mers')
+        # print(qs)
         serializer = CarSerializer(qs, many=True)
         return Response(serializer.data)
 
@@ -47,18 +52,32 @@ class CarCreateListView(APIView):
 class RetrieveDeleteView(APIView):
     def get(self, *args, **kwargs):
         pk = kwargs.get('pk')
-        try:
-            data = CarModel.objects.get(pk=pk)
-        except Exception as e:
-            return Response('Not found')
-        serializer = CarSerializer(data)
-        return Response(serializer.data)
+        # try:
+        #     data = CarModel.objects.get(pk=pk)
+        # except Exception as e:
+        #     return Response('Not found')
+        # serializer = CarSerializer(data)
+        # return Response(serializer.data)
+        user = get_object_or_404(CarModel.objects.all(), pk=pk)
+        data = CarSerializer(user).data
+        return Response(data, status=HTTP_200_OK)
 
     def delete(self, *args, **kwargs):
         pk = kwargs.get('pk')
-        try:
-            data = CarModel.objects.get(pk=pk)
-        except Exception as e:
-            return Response('Not found')
-        data.delete()
-        return Response('deleted')
+        # try:
+        #     data = CarModel.objects.get(pk=pk)
+        # except Exception as e:
+        #     return Response('Not found')
+        # data.delete()
+        # return Response('deleted')
+        instance = get_object_or_404(CarModel, pk=pk)
+        instance.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def patch(self, *args, **kwargs):
+        pk = kwargs.get('pk')
+        instance = get_object_or_404(CarModel, pk=pk)
+        serializer = CarSerializer(instance, self.request.data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=HTTP_200_OK)
